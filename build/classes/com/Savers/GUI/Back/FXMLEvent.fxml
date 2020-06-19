@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Savers.GUI.Back.FXMLEventController">
+   <children>
+      <TabPane layoutY="-4.0" prefHeight="499.0" prefWidth="711.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Evenement">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="dataEve" layoutX="269.0" layoutY="47.0" prefHeight="410.0" prefWidth="428.0">
+                           <columns>
+                              <TableColumn fx:id="colNoun" prefWidth="129.0" text="C1" />
+                              <TableColumn fx:id="colCat" prefWidth="142.0" text="C2" />
+                              <TableColumn fx:id="colFou" prefWidth="156.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="tf_nounE" layoutX="18.0" layoutY="50.0" prefHeight="27.0" prefWidth="232.0" />
+                        <TextField fx:id="tf_descE" layoutX="19.0" layoutY="198.0" prefHeight="93.0" prefWidth="232.0" />
+                        <ComboBox fx:id="cb_Cat" layoutX="19.0" layoutY="369.0" prefHeight="27.0" prefWidth="232.0" />
+                        <Label layoutX="18.0" layoutY="26.0" prefHeight="17.0" prefWidth="117.0" text="Nom" />
+                        <Label layoutX="19.0" layoutY="181.0" prefHeight="17.0" prefWidth="91.0" text="Description" />
+                        <Label layoutX="19.0" layoutY="300.0" prefHeight="17.0" prefWidth="135.0" text="Association" />
+                        <Label layoutX="19.0" layoutY="352.0" prefHeight="17.0" prefWidth="72.0" text="Category" />
+                        <Button layoutX="19.0" layoutY="415.0" mnemonicParsing="false" onAction="#addE" prefHeight="27.0" prefWidth="72.0" text="Ajouter" />
+                        <Button layoutX="94.0" layoutY="415.0" mnemonicParsing="false" onAction="#updateE" prefHeight="27.0" prefWidth="80.0" text="Modifier" />
+                        <Button layoutX="178.0" layoutY="415.0" mnemonicParsing="false" onAction="#deleteE" prefHeight="27.0" prefWidth="80.0" text="Supprimer" />
+                        <TextField fx:id="tf_searchE" layoutX="269.0" layoutY="18.0" onKeyReleased="#searchE" prefHeight="27.0" prefWidth="129.0" />
+                        <Button layoutX="580.0" layoutY="18.0" mnemonicParsing="false" onAction="#print" prefHeight="27.0" prefWidth="117.0" text="Imprimer" />
+                        <ComboBox fx:id="cb_asso" layoutX="19.0" layoutY="317.0" prefHeight="27.0" prefWidth="232.0" />
+                        <JFXDatePicker fx:id="dp_dateE" layoutX="20.0" layoutY="139.0" prefHeight="27.0" prefWidth="226.0" />
+                        <Label layoutX="18.0" layoutY="129.0" prefHeight="17.0" prefWidth="117.0" text="Udated At" />
+                        <JFXDatePicker fx:id="dp_dateE1" layoutX="20.0" layoutY="97.0" prefHeight="27.0" prefWidth="226.0" />
+                        <Label layoutX="20.0" layoutY="87.0" prefHeight="17.0" prefWidth="117.0" text="Date" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Categorie">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="dataCat" layoutX="379.0" layoutY="46.0" prefHeight="410.0" prefWidth="318.0">
+                           <columns>
+                              <TableColumn fx:id="typeCat" prefWidth="317.0" text="C1" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="tf_catName" layoutX="42.0" layoutY="154.0" prefHeight="27.0" prefWidth="232.0" />
+                        <Label layoutX="41.0" layoutY="132.0" prefHeight="17.0" prefWidth="117.0" text="Type" />
+                        <TextField fx:id="tf_searchCat" layoutX="379.0" layoutY="17.0" onKeyReleased="#searchC" prefHeight="27.0" prefWidth="129.0" />
+                        <Button layoutX="37.0" layoutY="355.0" mnemonicParsing="false" onAction="#addC" prefHeight="27.0" prefWidth="72.0" text="Ajouter" />
+                        <Button layoutX="113.0" layoutY="355.0" mnemonicParsing="false" onAction="#updateC" prefHeight="27.0" prefWidth="80.0" text="Modifier" />
+                        <Button layoutX="198.0" layoutY="355.0" mnemonicParsing="false" onAction="#deleteC" prefHeight="27.0" prefWidth="80.0" text="Supprimer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

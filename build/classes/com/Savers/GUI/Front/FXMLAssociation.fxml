@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Savers.GUI.Front.FXMLAssociationController">
+   <children>
+      <TableView fx:id="data" layoutX="14.0" layoutY="80.0" prefHeight="308.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="colNoun" prefWidth="174.0" text="C1" />
+          <TableColumn fx:id="colDesc" prefWidth="401.0" text="C2" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tf_search" layoutX="14.0" layoutY="53.0" onKeyPressed="#search" onKeyReleased="#search" prefHeight="27.0" prefWidth="175.0" />
+      <Button layoutX="441.0" layoutY="52.0" mnemonicParsing="false" onAction="#print" prefHeight="27.0" prefWidth="149.0" text="Imprimer" />
+      <JFXListView fx:id="listView" layoutX="14.0" layoutY="391.0" prefHeight="193.0" prefWidth="576.0" />
+   </children>
+</AnchorPane>
